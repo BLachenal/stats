@@ -4,6 +4,7 @@
  */
 function getLength(numbers) {
   // TODO
+  return numbers.length;
 }
 
 /**
@@ -11,7 +12,12 @@ function getLength(numbers) {
  * @returns {number} the sum of the numbers
  */
 function getSum(numbers) {
-  // TODO
+  // TODO -- for(let i = 0; i < numbers.length; i++)
+  let sum = 0;
+  for(let i = 0; i < numbers.length; i++){
+    sum = (sum + numbers[i]);
+  }
+  return sum;
 }
 
 /**
@@ -20,6 +26,13 @@ function getSum(numbers) {
  */
 function getMean(numbers) {
   // TODO
+  let sum = 0;
+  let mean;
+  for(let i = 0; i < numbers.length; i++){
+    sum = (sum + numbers[i]);
+  }
+  mean = (sum / numbers.length);
+  return mean;
 }
 
 /**
@@ -28,6 +41,13 @@ function getMean(numbers) {
  */
 function getMin(numbers) {
   // TODO
+  let smallest = 999999;
+  for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] < smallest ){
+      smallest = numbers[i];
+    }
+  }
+  return smallest;
 }
 
 /**
@@ -36,6 +56,13 @@ function getMin(numbers) {
  */
 function getMax(numbers) {
   // TODO
+  let biggest = 0;
+  for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] > biggest){
+      biggest = numbers[i];
+    }
+  }
+  return biggest;
 }
 
 /**
@@ -44,6 +71,19 @@ function getMax(numbers) {
  */
 function getRange(numbers) {
   // TODO
+    let biggest = 0;
+  for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] > biggest){
+      biggest = numbers[i];
+    }
+  }
+    let smallest = 999999;
+  for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] < smallest ){
+      smallest = numbers[i];
+    }
+  }
+  return biggest - smallest;
 }
 
 /**
@@ -52,6 +92,13 @@ function getRange(numbers) {
  */
 function getEvens(numbers) {
   // TODO
+  let evenNumbers = [];
+  for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] % 2 === 0){
+      evenNumbers.push(numbers[i]);
+    }
+  }
+  return evenNumbers;
 }
 
 /**
@@ -60,6 +107,13 @@ function getEvens(numbers) {
  */
 function getOdds(numbers) {
   // TODO
+  let oddNumbers = [];
+  for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] % 2 !== 0){
+      oddNumbers.push(numbers[i]);
+    }
+  }
+  return oddNumbers;
 }
 
 // === READ BUT DO NOT EDIT THE CODE BELOW ===
