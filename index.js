@@ -26,13 +26,14 @@ function getSum(numbers) {
  */
 function getMean(numbers) {
   // TODO
-  let sum = 0;
+/*   let sum = 0;
   let mean;
   for(let i = 0; i < numbers.length; i++){
     sum = (sum + numbers[i]);
   }
-  mean = (sum / numbers.length);
-  return mean;
+  mean = (sum / numbers.length); */
+
+  return (getSum(numbers)/numbers.length);
 }
 
 /**
@@ -71,7 +72,7 @@ function getMax(numbers) {
  */
 function getRange(numbers) {
   // TODO
-    let biggest = numbers[0];
+/*     let biggest = numbers[0];
   for(let i = 0; i < numbers.length; i++){
     if(numbers[i] > biggest){
       biggest = numbers[i];
@@ -82,8 +83,8 @@ function getRange(numbers) {
     if(numbers[i] < smallest ){
       smallest = numbers[i];
     }
-  }
-  return biggest - smallest;
+  } */
+  return getMax(numbers) - getMin(numbers);
 }
 /**
  * @param {number[]} numbers an array of integers
