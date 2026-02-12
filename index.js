@@ -41,7 +41,7 @@ function getMean(numbers) {
  */
 function getMin(numbers) {
   // TODO
-  let smallest = 999999;
+  let smallest = numbers[0];
   for(let i = 0; i < numbers.length; i++){
     if(numbers[i] < smallest ){
       smallest = numbers[i];
@@ -56,7 +56,7 @@ function getMin(numbers) {
  */
 function getMax(numbers) {
   // TODO
-  let biggest = 0;
+  let biggest = numbers[0];
   for(let i = 0; i < numbers.length; i++){
     if(numbers[i] > biggest){
       biggest = numbers[i];
@@ -71,13 +71,13 @@ function getMax(numbers) {
  */
 function getRange(numbers) {
   // TODO
-    let biggest = 0;
+    let biggest = numbers[0];
   for(let i = 0; i < numbers.length; i++){
     if(numbers[i] > biggest){
       biggest = numbers[i];
     }
   }
-    let smallest = 999999;
+    let smallest = numbers[0];
   for(let i = 0; i < numbers.length; i++){
     if(numbers[i] < smallest ){
       smallest = numbers[i];
@@ -85,7 +85,6 @@ function getRange(numbers) {
   }
   return biggest - smallest;
 }
-
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number[]} the even numbers in the array
